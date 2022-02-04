@@ -1,0 +1,18 @@
+desktop_background:
+  type: upload
+  default: ""
+
+mobile_background:
+  type: upload
+  default: ""
+
+button_url:
+  type: string
+  default: "/"
+
+plugin_outlet:
+  type: enum
+  default: "below-site-header"
+  options:
+    - "below-site-header"
+    - "above-site-header"
