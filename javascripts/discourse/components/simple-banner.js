@@ -1,8 +1,7 @@
 import Component from "@ember/component";
-import discourseComputed from "discourse-common/utils/decorators";
-import { computed } from "@ember/object";
+import { service } from "@ember/service";
 import { defaultHomepage } from "discourse/lib/utilities";
-import { inject as service } from "@ember/service";
+import discourseComputed from "discourse-common/utils/decorators";
 
 export default Component.extend({
   router: service(),
@@ -13,6 +12,6 @@ export default Component.extend({
 
   @discourseComputed("router.currentRouteName")
   isHomepage(currentRouteName) {
-    return currentRouteName == `discovery.${defaultHomepage()}`;
+    return currentRouteName === `discovery.${defaultHomepage()}`;
   },
 });
