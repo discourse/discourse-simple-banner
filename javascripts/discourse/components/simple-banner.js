@@ -1,7 +1,7 @@
 import Component from "@ember/component";
 import { service } from "@ember/service";
+import discourseComputed from "discourse/lib/decorators";
 import { defaultHomepage } from "discourse/lib/utilities";
-import discourseComputed from "discourse-common/utils/decorators";
 
 export default class SimpleBanner extends Component {
   @service router;
